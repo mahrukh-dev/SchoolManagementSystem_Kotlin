@@ -1,5 +1,5 @@
-import Classes.SMS
-import Classes.School
+import classes.SMS
+import classes.School
 
 fun main() {
 
