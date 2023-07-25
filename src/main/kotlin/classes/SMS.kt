@@ -1,6 +1,6 @@
-package Classes
+package classes
 
-class SMS(var school: School) {
+class SMS(private var school: School) {
         fun showMainMenu() {
             println("=== School Management System ===")
             println("1. View Students")
@@ -59,11 +59,11 @@ class SMS(var school: School) {
         }
         private fun enrollStudentInCourse() {
             println("Enter Student ID:")
-            val studentId = readLine()?.toInt() ?: return
+            val studentId = readLine()?.toInt()
             val student = school.students.find { it.studentId == studentId }
 
             println("Enter Course ID:")
-            val courseId = readLine()?.toInt() ?: return
+            val courseId = readLine()?.toInt()
             val course = school.courses.find { it.courseId == courseId }
 
             if (student != null && course != null) {
@@ -81,11 +81,11 @@ class SMS(var school: School) {
 
         private fun withdrawStudentFromCourse() {
             println("Enter Student ID:")
-            val studentId = readLine()?.toInt() ?: return
+            val studentId = readLine()?.toInt()
             val student = school.students.find { it.studentId == studentId }
 
             println("Enter Course ID:")
-            val courseId = readLine()?.toInt() ?: return
+            val courseId = readLine()?.toInt()
             val course = school.courses.find { it.courseId == courseId }
 
             if (student != null && course != null) {
@@ -105,7 +105,7 @@ class SMS(var school: School) {
             println("Enter Student ID:")
             val id = readLine()?.toIntOrNull()
             println("Enter Student Name:")
-            val name = readLine()?.toString()
+            val name = readLine()
             println("Enter Student Age:")
             val age = readLine()?.toIntOrNull()
             println("Enter Student Grade:")
@@ -125,11 +125,11 @@ class SMS(var school: School) {
             println("Enter Teacher ID:")
             val id = readLine()?.toIntOrNull()
             println("Enter Teacher Name:")
-            val name = readLine()?.toString()
+            val name = readLine()
             println("Enter Teacher Age:")
             val age = readLine()?.toIntOrNull()
             println("Enter Subject:")
-            val subject = readLine()?.toString()
+            val subject = readLine()
 
             if (name == null || age == null || id == null || subject == null) {
                 println("Addition unsuccessful")
@@ -144,10 +144,10 @@ class SMS(var school: School) {
             println("Enter Course ID:")
             val id = readLine()?.toIntOrNull()
             println("Enter Course Name:")
-            val cname = readLine()?.toString()
+            val cname = readLine()
             println("Enter Teacher ID:")
             val tid = readLine()?.toIntOrNull()
-            var teacher: Teacher? = school.teachers.find { it.teacherId == tid }
+            val teacher: Teacher? = school.teachers.find { it.teacherId == tid }
             println("Enter Max Capacity:")
             val max = readLine()?.toIntOrNull()
 
@@ -178,7 +178,7 @@ class SMS(var school: School) {
 
         private fun removeTeacher() {
             println("Enter Teacher ID to remove:")
-            val teacherId = readLine()?.toInt() ?: return
+            val teacherId = readLine()?.toInt()
             val teacher = school.teachers.find { it.teacherId == teacherId }
 
             if (teacher != null) {
@@ -191,7 +191,7 @@ class SMS(var school: School) {
 
         private fun removeCourse() {
             println("Enter Course ID to remove:")
-            val courseId = readLine()?.toInt() ?: return
+            val courseId = readLine()?.toInt()
             val course = school.courses.find { it.courseId == courseId }
 
             if (course != null) {
