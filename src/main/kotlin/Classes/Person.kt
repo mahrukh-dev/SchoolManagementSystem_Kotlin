@@ -1,6 +1,7 @@
 package Classes
 
 open class Person(namee: String, agee: Int) {
+
     private var _name: String = namee
     var name: String
         get() {return _name}
