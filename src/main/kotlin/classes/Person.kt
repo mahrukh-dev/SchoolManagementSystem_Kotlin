@@ -1,4 +1,4 @@
-package Classes
+package classes
 
 open class Person(namee: String, agee: Int) {
 
