@@ -1,4 +1,4 @@
-package Classes
+package classes
 
 class Student(name: String, age: Int, id: Int, gradee: Int, classList: MutableList<Course>): Person(name, age) {
 
