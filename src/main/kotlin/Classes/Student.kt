@@ -1,6 +1,6 @@
 package Classes
 
-class Student(name: String, age: Int, id: Int, gradee: Int, classList: MutableList<String>): Person(name, age) {
+class Student(name: String, age: Int, id: Int, gradee: Int, classList: MutableList<Course>): Person(name, age) {
     private var _studentId: Int = id
     var studentId: Int
         get() {return _studentId}
@@ -12,7 +12,7 @@ class Student(name: String, age: Int, id: Int, gradee: Int, classList: MutableLi
         set(value) {_grade = value}
 
     private var _enrolledClass = classList
-    var enrolledClass : MutableList<String>
+    var enrolledClass : MutableList<Course>
         get() {return _enrolledClass}
         set(value) {_enrolledClass = value}
 

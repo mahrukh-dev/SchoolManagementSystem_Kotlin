@@ -1,7 +1,15 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+import Classes.SMS
+import Classes.School
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main() {
+    val school = School()
+    val schoolManagementSystem = SMS(school)
+
+    while (true) {
+        schoolManagementSystem.showMainMenu()
+        val choice = readlnOrNull()?.toIntOrNull() ?: continue
+        if (choice == 12) break
+        schoolManagementSystem.handleUserInput(choice)
+    }
+
 }

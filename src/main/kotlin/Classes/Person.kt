@@ -13,8 +13,8 @@ open class Person(namee: String, agee: Int) {
         set(value) {_age = value}
 
     init{
-        this.age = _age
-        this.name = name
+        this.age = agee
+        this.name = namee
     }
 
 }
