@@ -1,6 +1,7 @@
 package Classes
 
 class Teacher(name: String, age: Int, id: Int, subj: String): Person(name, age) {
+
     private var _teacherId: Int = id
     var teacherId: Int
         get() {return _teacherId}
