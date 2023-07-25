@@ -1,4 +1,4 @@
-package Classes
+package classes
 
 class Teacher(name: String, age: Int, id: Int, subj: String): Person(name, age) {
 
