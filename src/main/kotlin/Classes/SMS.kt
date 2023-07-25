@@ -44,7 +44,7 @@ class SMS(var school: School) {
         private fun viewCourses() {
             println("=== List of Courses ===")
             for (course in school.courses) {
-                println("CourseID: ${course.courseId}, ${course.courseName}, ${course.teacher}, ${course.maxCapacity}")
+                println("CourseID: ${course.courseId}, CourseName: ${course.courseName}, Course Teacher: ${course.teacher.teacherId}, Max: ${course.maxCapacity}")
                 println("List of enrolled students")
                 for (std in course.enrolledStudents){
                     println("Name: ${std.name}, Age: ${std.age}, Student ID: ${std.studentId}, Grade: ${std.grade}")
