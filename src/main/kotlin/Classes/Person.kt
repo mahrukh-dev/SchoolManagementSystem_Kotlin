@@ -12,5 +12,4 @@ class Person {
         get() {return _age}
         set(value) {_age = value}
 
-
 }
