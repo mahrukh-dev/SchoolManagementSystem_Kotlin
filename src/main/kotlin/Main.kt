@@ -2,6 +2,7 @@ import Classes.SMS
 import Classes.School
 
 fun main() {
+
     val school = School()
     val schoolManagementSystem = SMS(school)
 
