@@ -1,4 +1,4 @@
-package Classes
+package classes
 
 class Course(id:Int, cname: String, cTeacher: Teacher, max:  Int, std: MutableList<Student>) {
 
