@@ -1,6 +1,7 @@
 package Classes
 
 class Student(name: String, age: Int, id: Int, gradee: Int, classList: MutableList<Course>): Person(name, age) {
+
     private var _studentId: Int = id
     var studentId: Int
         get() {return _studentId}
